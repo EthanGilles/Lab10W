@@ -28,7 +28,7 @@ public class RunningExample {
         System.out.println();
         
         //RADIX SORT RUN COUNTS - NATE
-        System.out.println("Radix Sort Queue Method Result:");
+        System.out.println("Radix Sort Running Counts Method Result:");
         RadixSortRC r2 = new RadixSortRC();
         r2.sort(arr2);
         
