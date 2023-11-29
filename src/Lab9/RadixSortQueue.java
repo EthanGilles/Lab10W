@@ -40,7 +40,16 @@ public class RadixSortQueue {
             
             //Your code goes here
             //Put items back to the array from the queues
-            
+            int index = 0;
+            for(int i = 0; i < 10; i++) {
+            	
+            	Queue queue = queues[i];
+            	Integer n;
+            	while((n = (Integer) queue.poll()) != null) {
+            		input[index] = n;
+            		index++;
+            	}
+            }
             
         }
         
@@ -62,7 +71,17 @@ public class RadixSortQueue {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         int[]arr = {100,200,333,431,198};
+        
+        for(int i : arr) {
+        	System.out.print(i + ", ");
+        }
+        System.out.print("\n");
+
         RadixSortQueue r = new RadixSortQueue();
         r.sort(arr);
+        
+        for(int i : arr) {
+        	System.out.print(i + ", ");
+        }
     }
 }
