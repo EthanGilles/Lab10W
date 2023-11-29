@@ -1,4 +1,3 @@
-package defaultpackage;
 
 public class RadixSortRC {
     // The array keeping the digit counts
