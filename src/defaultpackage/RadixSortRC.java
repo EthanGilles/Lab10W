@@ -1,4 +1,4 @@
-package Lab9;
+package defaultpackage;
 
 public class RadixSortRC {
     // The array keeping the digit counts
@@ -43,7 +43,18 @@ public class RadixSortRC {
             //Your code goes here
             //Copy the items in the second array accordingly
             
+
             
+            for (int i = input.length - 1; i >= 0; i--) {
+            	int digit = (input[i]/divisor)%RADIX_BASE;
+                copyArray[runningCounts[digit] - 1] = input[i];
+                runningCounts[digit]--;
+            }
+            
+            for(int i = 0; i < input.length; i++){
+                input[i] = copyArray[i];
+            }
+
         }
         
         // you may modify this line if needed
@@ -57,6 +68,7 @@ public class RadixSortRC {
         for(int i=0; i<runningCounts.length-1; i++)
             runningCounts[i+1] = digitCounts[i]+runningCounts[i];
     }
+    
 
     private void updateDigitCounts(int[] input, int divisor) {
         // updates the digit counts
@@ -71,6 +83,8 @@ public class RadixSortRC {
         int[]arr = {100,200,333,431,198};
         RadixSortRC r = new RadixSortRC();
         r.sort(arr);
+
+        
     }
 
 }
